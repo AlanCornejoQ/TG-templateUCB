@@ -1,11 +1,12 @@
 % Archivo principal: main.tex
 \documentclass[12pt,letterpaper]{report}
+\usepackage[justification=centering]{caption}
 
 % Importar configuración externa
 \input{configuracion}
 % Definir datos del documento
 \departamento{ciencias de la tecnología e innovación}
-\titulo{diseño de un sistema escada para la transmicion de datos de una celda de manufactura flexible}
+\titulo{TITULO DE TRABAJO (escrito en un letra mayuscula redactado en un maximo de 3 lineas alineado y justificado tamaño t16)\\}
 \autor{Nombre del Autor}
 \tutor{Nombre Tutor}
 \fecha{\number\year}
@@ -13,25 +14,50 @@
 % Generar portada automáticamente
 
 \begin{document}
-	
+	\caratulaTapa
 	\caratulaContenido
 	
 	% Índice general
-	\tableofcontents
-	\newpage
-	\listoffigures
+	\configurarIndices
+    \tableofcontents
+    \thispagestyle{empty}
+    \newpage
+    \listoffigures
+    \thispagestyle{empty}
+    \newpage
+    \listoftables
+    \thispagestyle{empty}
+    \newpage
 	
-	\newpage
-	\listoftables
-	\newpage
-	
-	
+
+	\iniciarNumeracion
 	% Secciones principales
 	\chapter{Introducción}
 	Aquí inicia el desarrollo del documento.
 	
 	\chapter{Marco Teórico}
 	Contenido del marco teórico.
+	\begin{figure}[ht]
+    
+    % Incrementa el contador de figuras para numerarlas automáticamente
+    \refstepcounter{figure}
+    % Número de la figura en negrita
+    \textbf{Figura \thefigure}\\[0.5em]
+    % Título de la figura en cursiva (una línea debajo del número)
+    \textit{Título breve pero descriptivo de la imagen}\\[1em]
+    \begin{center}
+    
+    \includegraphics[width=0.8\textwidth]{eje1.png}\\[1em]
+    \end{center}
+    % Inserción de la imagen
+    
+    % Leyenda: explicación de símbolos o detalles de la imagen
+    
+    % Nota: información adicional si fuese necesaria
+    \normalsize Nota: Se incluye la nota únicamente cuando es necesaria para aclarar información adicional.
+	\addcontentsline{lof}{figure}{Figura \thefigure. \textit{Título breve pero descriptivo}}
+
+\end{figure}
 	
 	\chapter{Metodología}
 	Descripción de la metodología empleada.
