@@ -12,6 +12,7 @@
 \fecha{\number\year}
 \carrera{ingeniería mecatrónica}
 % Generar portada automáticamente
+\setcounter{secnumdepth}{5}  % Hasta subparagraph numerado
 
 \begin{document}
 	\caratulaTapa
@@ -29,51 +30,97 @@
     \thispagestyle{empty}
     \newpage
 	
-
+	
 	\iniciarNumeracion
 	% Secciones principales
-	\chapter{Introducción}
+	\renewcommand{\thesection}{\arabic{section}}
+	\section{ANÁLISIS DEL PROBLEMA}
 	Aquí inicia el desarrollo del documento.
+	\subsection{Introducción}
+	Breve presentación del tema del proyecto y su relevancia
+	\subsection{Descripción del problema}
+	Detalle especifico del problema que se va a abordar, destacando su importancia.
+	\subsection{Formulación del problema}
+	Planteamiento claro y conciso del problema del proyecto.
+	\subsection{Pregunta de investigación (opcional)}
+	Pregunta principal que el proyecto busca responder.
+	\subsection{Objetivos del proyecto}
+	\subsubsection{Objetivo general}
+	Meta  del proyecto.
+	\subsubsection{Objetivos específicos}
+	Metas secundarias que ayudan a alcanzar el objetivo general.
+	\subsection{Delimitación del proyecto}
+	Definición del alcance y las limitaciones del estudio.
+	\subsection{Justificación}
+	Explicación de la relevancia y la importancia del proyecto, y como contribuirá al campo tecnológico.
 	
-	\chapter{Marco Teórico}
-	Contenido del marco teórico.
-	\begin{figure}[ht]
-    
-    % Incrementa el contador de figuras para numerarlas automáticamente
-    \refstepcounter{figure}
-    % Número de la figura en negrita
-    \textbf{Figura \thefigure}\\[0.5em]
-    % Título de la figura en cursiva (una línea debajo del número)
-    \textit{Título breve pero descriptivo de la imagen}\\[1em]
-    \begin{center}
-    
-    \includegraphics[width=0.8\textwidth]{eje1.png}\\[1em]
-    \end{center}
-    % Inserción de la imagen
-    
-    % Leyenda: explicación de símbolos o detalles de la imagen
-    
-    % Nota: información adicional si fuese necesaria
-    \normalsize Nota: Se incluye la nota únicamente cuando es necesaria para aclarar información adicional.
-	\addcontentsline{lof}{figure}{Figura \thefigure. \textit{Título breve pero descriptivo}}
-
-\end{figure}
+	\newpage
+	\section{Marco Teórico}
+	\subsection{Antecedentes y referencias}
+	Información previa y estudios anteriores relevantes al tema del proyecto.
+	\subsection{Estado del arte}
+	Resumen y análisis de las investigaciones mas recientes y relevantes en el área, identificando tendencias y vacíos en el conocimiento.
+	\subsection{Desarrollo de teorías y modelos}
+	Descripción de las teorías y modelos que sustentan el proyecto.
+	\subsection{Definición de términos básicos}
+	Explicación de términos técnicos y conceptos específicos utilizados en el proyecto
 	
-	\chapter{Metodología}
-	Descripción de la metodología empleada.
+	\newpage
+	\section{Marco tecnológico}
 	
-	\chapter{Resultados y Discusión}
-	Resultados y análisis.
+	\subsection{Tecnologías utilizadas y tendencias}
+	Identificación de tecnologías, sus tendencias y su impacto potencial en el proyecto.
 	
-	\chapter{Conclusiones y Recomendaciones}
-	Conclusiones del trabajo.
+	\subsection{Comparación de tecnologías}
+	Análisis comparativo de diferentes tecnologías disponibles.
 	
+	\newpage
+	\section{Marco metodológico}
+	
+	\subsection{Metodología}
+	Descripción detallada del enfoque y métodos utilizados para llevar a cabo el proyecto, incluyendo técnicas de recolección de datos y análisis.
+	
+	\subsection{Plan de trabajo}
+	Cronograma y fases del proyecto, especificando actividades y tiempos estimados para cada etapa.
+	\newpage
+	\section{Marco legal (opcional)}
+	
+	\newpage
+	\section{Ingeniería del proyecto}
+	
+	\newpage
+	\section{Conclusiones y recomendaciones}
+	
+	\newpage
 	% Bibliografía
-	\chapter*{Bibliografía}
+	\section*{Bibliografía}
 	Aquí van las referencias en formato APA 7ma edición.
 	
+	\newpage
 	% Anexos
-	\chapter*{Anexos}
+	\section*{Anexos}
 	Aquí se pueden agregar anexos.
+	
+	\begin{figure}[ht]
+		
+		% Incrementa el contador de figuras para numerarlas automáticamente
+		\refstepcounter{figure}
+		% Número de la figura en negrita
+		\textbf{Figura \thefigure}\\[0.5em]
+		% Título de la figura en cursiva (una línea debajo del número)
+		\textit{Título breve pero descriptivo de la imagen}\\[1em]
+		\begin{center}
+			
+			\includegraphics[width=0.8\textwidth]{eje1.png}\\[1em]
+		\end{center}
+		% Inserción de la imagen
+		
+		% Leyenda: explicación de símbolos o detalles de la imagen
+		
+		% Nota: información adicional si fuese necesaria
+		\normalsize Nota: Se incluye la nota únicamente cuando es necesaria para aclarar información adicional.
+		\addcontentsline{lof}{figure}{Figura \thefigure. \textit{Título breve pero descriptivo}}
+		
+	\end{figure}
 	
 \end{document}
