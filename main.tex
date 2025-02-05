@@ -1,22 +1,94 @@
 % Archivo principal: main.tex
 \documentclass[12pt,letterpaper]{report}
 \usepackage[justification=centering]{caption}
-
+\usepackage{multicol}
 % Importar configuración externa
 \input{configuracion}
 % Definir datos del documento
 \departamento{ciencias de la tecnología e innovación}
-\titulo{TITULO DE TRABAJO (escrito en un letra mayuscula redactado en un maximo de 3 lineas alineado y justificado tamaño t16)\\}
+\titulo{TITULO DE TRABAJO (escrito en un letra mayuscula redactado en un maximo de 3 lineas alineado y justificado tamaño t16)}
 \autor{Nombre del Autor}
 \tutor{Nombre Tutor}
 \fecha{\number\year}
 \carrera{ingeniería mecatrónica}
 % Generar portada automáticamente
 \setcounter{secnumdepth}{5}  % Hasta subparagraph numerado
-
+\fancypagestyle{inicio}{
+  \fancyhf{} % Limpia encabezados y pies
+  % Define el encabezado a la izquierda tanto para páginas pares como impares
+  \fancyhead[LO,LE]{Mi Encabezado Personalizado}
+  \renewcommand{\headrulewidth}{0.4pt} % Línea de separación (opcional)
+}
 \begin{document}
 	\caratulaTapa
 	\caratulaContenido
+	\newpage
+	{
+	\begin{center}
+	{\fontsize{14}{16}\selectfont \MakeUppercase{\Titulo}}\\
+	
+	\vspace{0.3cm}
+	{\fontsize{14}{16}\selectfont \MakeUppercase{Titulo en Ingles}}\\
+	
+	{\fontsize{12}{14}\selectfont \MakeUppercase{\Autor}}\\
+	\end{center}
+	\section*{RESUMEN}
+	\section*{ABSTRACT}
+	\begin{multicols}{2}
+	\section*{INTRODUCCION}
+	En ésta se presenta claramente el qué y el porqué de la investigación, incluye el planteamiento del problema, objetivo y preguntas de
+la investigación, así como la justificación del
+problema, el contexto general de investigación,
+cómo y dónde se realizó, las variables de la investigación y sus definiciones, así como las limitaciones de ésta. Se puede incluir el marco
+de referencia o revisión de la literatura.
+Debe captar la atención del lector desde el
+primer párrafo introductorio, invitando e interesando al lector a seguir leyendo el documento, con un estilo directo sin dejar espacio
+a otras interpretaciones.
+El tema general se presenta prontamente,
+para luego pasar al problema de investigación,
+que es el fenómeno específico de interés que
+debe ser actual, susceptible de observación y
+de medición, es decir, factible de investigar.
+
+Debe existir una amplia revisión bibliográfica de lo que se sabe actualmente en función
+de lo publicado sobre el problema, la que debe
+ser relevante y reflejar la información sobre
+antecedentes del problema necesario para
+apoyar la justificación del estudio. Las referencias citadas en el texto deben estar bien
+documentadas y actualizadas.
+	\section*{METODOLOGIA}
+	\section*{RESULTADOS}
+	Es lo más importante del informe, no dede
+contener comentarios, ni juicios de valor, ni
+justificaciones.
+Los resultados deben presentarse en el orden que fueron planteados los objetivos, de
+lo más importante a lo menos significativo.
+En la presentación adquiere más importancia el texto que los gráficos y tablas, debiendo ser claro, conciso, preciso y con una
+secuencia lógica.
+	\section*{CONCLUSIONES}
+	\section*{BIBLIOGRAFIA}
+	\end{multicols}
+	\thispagestyle{empty}
+	}
+	
+	\newpage
+	\begin{center}
+	\section*{Resumen Ejecutivo}
+	\end{center}
+	Generalmente su extensión es igual a una plana, con una extensión de 150 a 200 palabras.\\
+El mismo debe contener la información más importante de todo el trabajo, como:
+breve descripción del problema, principales conclusiones o hallazgos del análisis,
+principales características de la propuesta, y conclusiones del documento.\\
+Al final del resumen se debe incluir entre tres (3) a cinco (5) palabras claves que
+definen el contenido del trabajo.
+	\thispagestyle{empty}
+	\newpage
+	\begin{center}
+	\section*{Abstract}
+	\end{center}
+	
+	\thispagestyle{empty}
+	\newpage
 	
 	% Índice general
 	\configurarIndices
@@ -34,7 +106,10 @@
 	\iniciarNumeracion
 	% Secciones principales
 	\renewcommand{\thesection}{\arabic{section}}
-	\section{ANÁLISIS DEL PROBLEMA}
+	\begin{center}
+	\section{Análisis del problema}
+	\end{center}
+	
 	Aquí inicia el desarrollo del documento.
 	\subsection{Introducción}
 	Breve presentación del tema del proyecto y su relevancia
@@ -45,6 +120,51 @@
 	\subsection{Pregunta de investigación (opcional)}
 	Pregunta principal que el proyecto busca responder.
 	\subsection{Objetivos del proyecto}
+	\textcolor{red}{
+	\begin{itemize}
+	\item \textbf{Generales: }expresan las intenciones educativas de un proyecto curricular, de un plan
+de estudios, o de una asignatura. Son los propósitos más amplios que persigue un
+programa en cada nivel y su cumplimiento está en función del tiempo de duración de
+la carrera o de la asignatura dentro de la estructura y organización curricular.
+	\item 
+	\textbf{Particulares:} se derivan de los generales de la asignatura y corresponden a cada una
+de las unidades del programa analítico de la misma. Aquí se precisan las intenciones
+educativas de una parte del contenido (sistema de conocimientos y sistema de
+habilidades), que se aborda, lo cual debe conducir al logro de los objetivos generales
+de la asignatura en su conjunto y de los objetivos curriculares del Plan de Estudios.
+	\item 
+	\textbf{Específicos:} se derivan de los objetivos particulares y corresponden a los de las clases
+de cada unidad didáctica, por lo que existe un mayor grado de concreción de las
+intenciones educativas. El cumplimiento de estos objetivos debe conducir al logro de
+los objetivos de la unidad del programa de la asignatura, como parte de la estructura
+curricular y contribuir al cumplimiento de los objetivos del plan de estudio.
+	\end{itemize}	
+	¿CÓMO REDACTAR OBJETIVOS?\\
+1. Todo objetivo inicia su redacción utilizando un verbo en forma infinitiva, así se
+precisa el propósito del objetivo con más claridad. Este verbo describe el qué del
+objetivo.Por ejemplo:\\
+Identificar …………\\
+Comparar …………\\
+Aplicar ……………\\
+Diagnosticar …………\\
+Describir ………\\
+Reflexionar……………\\
+Fundamentar …………\\
+2. Para completar el enunciado del objetivo se da respuesta al PARA QUE del
+propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
+… con el fin de ….\\
+…. para….\\
+3. Termina enuciando el CÓMO se logrará el objetivo. Por ejemplo:\\
+…………mediante ….\\
+……… a través de …..\\
+…….. utilizando …..\\
+	}
+	
+	
+
+	
+
+
 	\subsubsection{Objetivo general}
 	Meta  del proyecto.
 	\subsubsection{Objetivos específicos}
@@ -55,7 +175,9 @@
 	Explicación de la relevancia y la importancia del proyecto, y como contribuirá al campo tecnológico.
 	
 	\newpage
+	\begin{center}
 	\section{Marco Teórico}
+	\end{center}
 	\subsection{Antecedentes y referencias}
 	Información previa y estudios anteriores relevantes al tema del proyecto.
 	\subsection{Estado del arte}
@@ -66,7 +188,9 @@
 	Explicación de términos técnicos y conceptos específicos utilizados en el proyecto
 	
 	\newpage
+	\begin{center}
 	\section{Marco tecnológico}
+	\end{center}
 	
 	\subsection{Tecnologías utilizadas y tendencias}
 	Identificación de tecnologías, sus tendencias y su impacto potencial en el proyecto.
@@ -75,7 +199,9 @@
 	Análisis comparativo de diferentes tecnologías disponibles.
 	
 	\newpage
+	\begin{center}
 	\section{Marco metodológico}
+	\end{center}
 	
 	\subsection{Metodología}
 	Descripción detallada del enfoque y métodos utilizados para llevar a cabo el proyecto, incluyendo técnicas de recolección de datos y análisis.
@@ -83,22 +209,32 @@
 	\subsection{Plan de trabajo}
 	Cronograma y fases del proyecto, especificando actividades y tiempos estimados para cada etapa.
 	\newpage
+	\begin{center}
 	\section{Marco legal (opcional)}
+	\end{center}
 	
 	\newpage
+	\begin{center}
 	\section{Ingeniería del proyecto}
+	\end{center}
 	
 	\newpage
+	\begin{center}
 	\section{Conclusiones y recomendaciones}
+	\end{center}
 	
 	\newpage
 	% Bibliografía
+	\begin{center}
 	\section*{Bibliografía}
+	\end{center}
 	Aquí van las referencias en formato APA 7ma edición.
 	
 	\newpage
 	% Anexos
+	\begin{center}
 	\section*{Anexos}
+	\end{center}
 	Aquí se pueden agregar anexos.
 	
 	\begin{figure}[ht]
