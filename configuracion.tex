@@ -108,14 +108,16 @@
     }
 }
 \newcommand{\configurarIndices}{
-    % Líder de puntos para el índice general (capítulos, secciones y subsecciones)
-    \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
-    \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-    \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
-    
-    % Líder de puntos para la lista de figuras
-    \renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
-    
-    % Líder de puntos para la lista de tablas
-    \renewcommand{\cfttableader}{\cftdotfill{\cftdotsep}}
+	\setcounter{tocdepth}{3}
+	\setcounter{secnumdepth}{3}
+	
+	% Líder de puntos (dotfill) para los niveles
+	\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+	\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+	\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+	\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+	
+	% Opcional: líder de puntos para figuras y tablas
+	\renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
+	\renewcommand{\cfttableader}{\cftdotfill{\cftdotsep}}
 }
