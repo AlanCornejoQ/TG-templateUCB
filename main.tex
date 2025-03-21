@@ -2,6 +2,7 @@
 \documentclass[12pt,letterpaper]{report}
 \usepackage[justification=centering]{caption}
 \usepackage{multicol}
+\usepackage{pdfpages}
 % Importar configuración externa
 \input{configuracion}
 % Definir datos del documento
@@ -27,60 +28,8 @@
 	\pagestyle{empty}
 	
 	{
-	\begin{center}
-	{\fontsize{14}{16}\selectfont \MakeUppercase{\Titulo}}\\
-	
-	\vspace{0.3cm}
-	{\fontsize{14}{16}\selectfont \MakeUppercase{Titulo en Ingles}}\\
-	
-	{\fontsize{12}{14}\selectfont \MakeUppercase{\Autor}}\\
-	\end{center}
-	\section*{RESUMEN}
-	Generalmente su extensión es igual a una plana, con una extensión de 150 a 200 palabras.\\
-	El mismo debe contener la información más importante de todo el trabajo, como:
-	breve descripción del problema, principales conclusiones o hallazgos del análisis,
-	principales características de la propuesta, y conclusiones del documento.\\
-	Al final del resumen se debe incluir entre tres (3) a cinco (5) palabras claves que
-	definen el contenido del trabajo.
-	
-	\section*{ABSTRACT}
-	Resumen Ejecutivo en formato inglés, siguiendo las misma estructura que el anterior apartado.
-	
-	\begin{multicols}{2}
-	\section*{INTRODUCCIÓN}
-	En ésta se presenta claramente el qué y el porqué de la investigación, incluye el planteamiento del problema, objetivo y preguntas de
-la investigación, así como la justificación del
-problema, el contexto general de investigación,
-cómo y dónde se realizó, las variables de la investigación y sus definiciones, así como las limitaciones de ésta. Se puede incluir el marco
-de referencia o revisión de la literatura.
-Debe captar la atención del lector desde el
-primer párrafo introductorio, invitando e interesando al lector a seguir leyendo el documento, con un estilo directo sin dejar espacio
-a otras interpretaciones.
-El tema general se presenta prontamente,
-para luego pasar al problema de investigación,
-que es el fenómeno específico de interés que
-debe ser actual, susceptible de observación y
-de medición, es decir, factible de investigar.
-Debe existir una amplia revisión bibliográfica de lo que se sabe actualmente en función
-de lo publicado sobre el problema, la que debe
-ser relevante y reflejar la información sobre
-antecedentes del problema necesario para
-apoyar la justificación del estudio. Las referencias citadas en el texto deben estar bien
-documentadas y actualizadas.
-	\section*{METODOLOGÍA}
-	Descripción detallada del enfoque y métodos utilizados para llevar a cabo el proyecto, incluyendo técnicas de recolección de datos y análisis.
-	
-	\section*{RESULTADOS}
-	Es lo más importante del informe, no debe
-contener comentarios, ni juicios de valor, ni
-justificaciones.
-Los resultados deben presentarse en el orden que fueron planteados los objetivos, de
-lo más importante a lo menos significativo.
-En la presentación adquiere más importancia el texto que los gráficos y tablas, debiendo ser claro, conciso, preciso y con una
-secuencia lógica.
-	\section*{CONCLUSIONES}
-	\section*{BIBLIOGRAFÍA}
-	\end{multicols}
+	%JUSTO ACA NECESITO EL IEEE
+	\includepdf[pages=-,scale=1]{IEEE/IEEE-conference-template-062824.pdf}
 	
 	}
 	
