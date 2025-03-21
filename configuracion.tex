@@ -6,7 +6,15 @@
 % Paquetes básicos y configuración de idioma/tipografía
 %=====================================================================
 \usepackage[left=3.5cm, right=3cm, top=3cm, bottom=3cm]{geometry} % Márgenes
-\usepackage[spanish]{babel}    % Idioma español
+\usepackage[english,main=spanish]{babel} % Idiomas 
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\captionsetup[table]{%
+	labelsep=newline,            % Salto de línea entre "Tabla 1" y el título
+	labelfont=bf,                % "Tabla 1" en negrita
+	textfont=it,                 % Título en cursiva
+	justification=raggedright,   % Alineado a la izquierda
+	singlelinecheck=false        % Evitar centrado si es una sola línea
+}
 \usepackage[T1]{fontenc}       % Codificación de fuente
 \usepackage{times}             % Usa Times New Roman
 \usepackage{fontsize}          % Permite comandos de tamaño de fuente
