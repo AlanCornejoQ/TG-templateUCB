@@ -1,18 +1,27 @@
 % Archivo principal: main.tex
 \documentclass[12pt,letterpaper]{report}
+%---------------------------------------------------------------------
+% Paquetes
+%---------------------------------------------------------------------
 \usepackage[justification=centering]{caption}
 \usepackage{multicol}
 \usepackage{pdfpages}
+%---------------------------------------------------------------------
 % Importar configuración externa
+%---------------------------------------------------------------------
 \input{configuracion}
+%---------------------------------------------------------------------
 % Definir datos del documento
+%---------------------------------------------------------------------
 \departamento{ciencias de la tecnología e innovación}
 \titulo{TITULO DE TRABAJO (escrito en un letra mayúscula redactado en un máximo de 3 lineas alineado y justificado tamaño t16)}
 \autor{Nombre del Autor}
 \tutor{Nombre Tutor}
 \fecha{\number\year}
 \carrera{ingeniería mecatrónica}
-% Generar portada automáticamente
+%---------------------------------------------------------------------
+% Ajustes de numeración y estilos de página
+%---------------------------------------------------------------------
 \setcounter{secnumdepth}{5}  % Hasta subparagraph numerado
 \fancypagestyle{inicio}{
   \fancyhf{} % Limpia encabezados y pies
@@ -20,20 +29,29 @@
   \fancyhead[LO,LE]{Mi Encabezado Personalizado}
   \renewcommand{\headrulewidth}{0.4pt} % Línea de separación (opcional)
 }
+%---------------------------------------------------------------------
+% Inicio documento
+%---------------------------------------------------------------------
 \begin{document}
+	%---------------------------------------------------------------------
+	% Portadas
+	%---------------------------------------------------------------------
 	\caratulaTapa
 	\caratulaContenido
 	\newpage
 	\clearpage
 	\pagestyle{empty}
-	
+	%---------------------------------------------------------------------
+	% Insertar artículo IEEE (compilado por separado)
+	%---------------------------------------------------------------------
 	{
-	%JUSTO ACA NECESITO EL IEEE
 	\includepdf[pages=-,scale=1]{IEEE/IEEE-conference-template-062824.pdf}
-	
 	}
 	
 	\newpage
+	%---------------------------------------------------------------------
+	% Resumen Ejecutivo
+	%---------------------------------------------------------------------
 	\begin{center}
 	\section*{Resumen Ejecutivo}
 	\end{center}
@@ -45,6 +63,9 @@ Al final del resumen se debe incluir entre tres (3) a cinco (5) palabras claves 
 definen el contenido del trabajo.
 	\thispagestyle{empty}
 	\newpage
+	%---------------------------------------------------------------------
+	% Abstract
+	%---------------------------------------------------------------------
 	\begin{center}
 	\section*{Abstract}
 	Resumen Ejecutivo en formato inglés, siguiendo las misma estructura que el anterior apartado.
@@ -54,7 +75,9 @@ definen el contenido del trabajo.
 	\thispagestyle{empty}
 	\newpage
 	
-	% Índice general
+%---------------------------------------------------------------------
+% Índices (índice general, figuras, tablas)
+%---------------------------------------------------------------------
 	\configurarIndices
     \tableofcontents
     \thispagestyle{empty}
@@ -66,9 +89,13 @@ definen el contenido del trabajo.
     \thispagestyle{empty}
     \newpage
 	
-	
+	%---------------------------------------------------------------------
+	% Iniciar numeración normal
+	%---------------------------------------------------------------------
 	\iniciarNumeracion
+	%---------------------------------------------------------------------
 	% Secciones principales
+	%---------------------------------------------------------------------
 	\renewcommand{\thesection}{\arabic{section}}
 	\begin{center}
 	\section{Análisis del problema}
@@ -138,6 +165,9 @@ propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
 	\subsection{Justificación}
 	Explicación de la relevancia y la importancia del proyecto, y como contribuirá al campo tecnológico.
 	
+	%---------------------------------------------------------------------
+	% Marco Teórico
+	%---------------------------------------------------------------------
 	\newpage
 	\begin{center}
 	\section{Marco Teórico}
@@ -151,6 +181,9 @@ propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
 	\subsection{Definición de términos básicos}
 	Explicación de términos técnicos y conceptos específicos utilizados en el proyecto
 	
+	%---------------------------------------------------------------------
+	% Marco Tecnológico
+	%---------------------------------------------------------------------
 	\newpage
 	\begin{center}
 	\section{Marco tecnológico}
@@ -162,6 +195,9 @@ propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
 	\subsection{Comparación de tecnologías}
 	Análisis comparativo de diferentes tecnologías disponibles.
 	
+	%---------------------------------------------------------------------
+	% Marco Metodológico
+	%---------------------------------------------------------------------
 	\newpage
 	\begin{center}
 	\section{Marco metodológico}
@@ -172,30 +208,44 @@ propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
 	
 	\subsection{Plan de trabajo}
 	Cronograma y fases del proyecto, especificando actividades y tiempos estimados para cada etapa.
+	
+	%---------------------------------------------------------------------
+	% Marco Legal (opcional)
+	%---------------------------------------------------------------------
 	\newpage
 	\begin{center}
 	\section{Marco legal (opcional)}
 	\end{center}
 	
+	%---------------------------------------------------------------------
+	% Ingeniería del Proyecto
+	%---------------------------------------------------------------------
 	\newpage
 	\begin{center}
 	\section{Ingeniería del proyecto}
 	\end{center}
 	
+	%---------------------------------------------------------------------
+	% Conclusiones y Recomendaciones
+	%---------------------------------------------------------------------
 	\newpage
 	\begin{center}
 	\section{Conclusiones y recomendaciones}
 	\end{center}
 	
-	\newpage
+	%---------------------------------------------------------------------
 	% Bibliografía
+	%---------------------------------------------------------------------
+	\newpage
 	\begin{center}
 	\section*{Bibliografía}
 	\end{center}
 	Aquí van las referencias en formato APA 7ma edición.
 	
-	\newpage
+	%---------------------------------------------------------------------
 	% Anexos
+	%---------------------------------------------------------------------
+	\newpage
 	\begin{center}
 	\section*{Anexos}
 	\end{center}
