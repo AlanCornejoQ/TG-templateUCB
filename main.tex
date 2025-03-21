@@ -6,10 +6,14 @@
 \usepackage[justification=centering]{caption}
 \usepackage{multicol}
 \usepackage{pdfpages}
+
 %---------------------------------------------------------------------
 % Importar configuración externa
 %---------------------------------------------------------------------
 \input{configuracion}
+\renewcommand{\cfttabpresnum}{Tabla ~ } % Prefijo: "Tabla "
+\renewcommand{\cfttabaftersnum}{: }   % Sufijo: ": "
+\setlength{\cfttabnumwidth}{4em} 
 %---------------------------------------------------------------------
 % Definir datos del documento
 %---------------------------------------------------------------------
@@ -278,7 +282,7 @@ propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
 		% -- La 'caption' define el título que aparecerá en el índice de tablas.
 		% -- En estilo APA 7, normalmente se pone el número de tabla en negrita
 		%    y debajo (o en la misma línea) el título en cursiva.
-		\caption{\textit{Relación de variables en estudio}}
+		\caption{\textit{Ejemplo de tabla}}
 		\label{tab:variables} % Para referenciarla con \ref{tab:variables}
 		\centering
 		\begin{tabular}{l c}
@@ -296,27 +300,7 @@ propósito. Es decir se explica la finalidad del objetivo. Por ejemplo:\\
 			Los datos se obtuvieron de la base de datos interna.
 		\end{flushleft}
 	\end{table}
-	\begin{table}[ht]
-		\captionsetup{justification=raggedright,singlelinecheck=false}
-		% -- La 'caption' define el título que aparecerá en el índice de tablas.
-		% -- En estilo APA 7, normalmente se pone el número de tabla en negrita
-		%    y debajo (o en la misma línea) el título en cursiva.
-		\caption{\textit{Radelación de variables en estudio}}
-		
-		\centering
-		\begin{tabular}{l c}
-			\hline
-			\textbf{Variable} & \textbf{Valor} \\
-			\hline
-			Variable A        & 10 \\
-			Variable B        & 20 \\
-			\hline
-		\end{tabular}
-		
-		% -- Nota al pie de la tabla, en flushleft, según convención APA (pequeña explicación).
-		\begin{flushleft}
-			\textit{Nota}. Ejemplo de tabla en estilo APA 7. * p < .05.  
-			Los datos se obtuvieron de la base de datos interna.
-		\end{flushleft}
-	\end{table}
+	
+	
+	
 \end{document}
